@@ -28,7 +28,7 @@ namespace AuthProject.Controllers
         }
 
         [HttpPost]
-         public IActionResult CreatUser()
+         public IActionResult CreateUser()
         {
             return View();
         }
