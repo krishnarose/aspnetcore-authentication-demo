@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Register";
+}
+
+@model User
+@{
+    var postUrl = Url.Action("CreateUser", "Account");
+}
+
+<h2>Register</h2>
+
+<form method="post" action="@postUrl">
+    <div class="form-group">
+        <label>Enter Your Name</label><br />
+        <input type="text" name="name" required />
+    </div>
+
+    <div class="form-group md-3">
+       <select name="role" required>
+           <option value="" disabled selected>Select Role</option>
+           <option value="User">User</option>
+           <option value="Admin">Admin</option>
+       </select>
+    </div>
+
+    <br />
+    <button type="submit">Register</button>
+</form>
+
+
+<p>
+    Already have an account?
+    <a asp-controller="Account" asp-action="Login" >Login</a>
+</p>
