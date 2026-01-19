@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container home-wrapper text-center">
+    <h1 class="mb-4">Welcome to Our Application</h1>
+
+    <p class="mb-5 text-muted">
+        Please login or create a new account to continue
+    </p>
+
+    <div class="d-flex justify-content-center gap-3">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg custom-btn">
+            Login->
+        </a>
+
+        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-success btn-lg custom-btn">
+            Register
+        </a>
+    </div>
+</div>
