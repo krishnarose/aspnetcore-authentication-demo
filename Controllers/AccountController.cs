@@ -28,9 +28,16 @@ namespace AuthProject.Controllers
         }
 
         [HttpPost]
-         public IActionResult CreateUser()
+         public IActionResult CreateUser(string name, string role)
         {
-            return View();
+            User user = new User
+            {
+                Id = 1,
+                Name = name,
+                Role = role,
+                Created_at = DateTime.Now
+            };
+            return View("Register", user);
         }
     }
 }

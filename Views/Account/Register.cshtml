@@ -3,9 +3,9 @@
 }
 
 @model User
-@{
+@* @{
     var postUrl = Url.Action("CreateUser", "Account");
-}
+} *@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -21,7 +21,7 @@
                         <div class="mb-3">
                             <label class="form-label">Enter Your Name</label>
                             <input type="text"
-                                   name="name"
+                                   asp-for="Name"
                                    class="form-control"
                                    placeholder="Enter full name"
                                    required />
@@ -30,7 +30,7 @@
                         <!-- Role -->
                         <div class="mb-3">
                             <label class="form-label">Select Role</label>
-                            <select name="role" class="form-select" required>
+                            <select asp-for="Role" class="form-select" required>
                                 <option value="" disabled selected>Select Role</option>
                                 <option value="User">User</option>
                                 <option value="Admin">Admin</option>
@@ -41,6 +41,11 @@
                         <div class="d-grid mt-4">
                             <button type="submit" class="btn btn-primary">
                                 Register User
+                            </button>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="reset" class="btn btn-primary">
+                                Reset
                             </button>
                         </div>
                     </form>
