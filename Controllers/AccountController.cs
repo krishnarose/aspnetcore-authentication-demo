@@ -1,10 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using AuthProject.Models;
+using AuthProject.Data;
 
 namespace AuthProject.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly DapperContext _context;
+
+        public AccountController(DapperContext context)
+        {
+            _context = context;
+        }
         public IActionResult Login()
         {
             User user = new User
@@ -24,6 +31,7 @@ namespace AuthProject.Controllers
 
         public IActionResult Register()
         {
+            var connection = _context.CreateConnection();
             return View();
         }
 
