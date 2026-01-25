@@ -1,9 +1,11 @@
-namespace AuthProject.Models;
-
-public class User
+namespace AuthProject.Models
 {
-    public int Id { get; set; }
-    public string Name { get; set; }   
-    public string Role { get; set; }
-    public DateTime Created_at { get; set; }
+    public class User
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string role { get; set; }
+        public string password { get; set; }
+        public DateTime created_at { get; set; }
+    }
 }

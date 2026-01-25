@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using AuthProject.Models;
+
 using AuthProject.Data;
+
+using System.Threading.Tasks;
+using AuthProject.Models.ViewModels;
+using Dapper;
 
 namespace AuthProject.Controllers
 {
@@ -12,40 +17,87 @@ namespace AuthProject.Controllers
         {
             _context = context;
         }
-        public IActionResult Login()
+         public IActionResult Login()
         {
-            User user = new User
-            {
-                Id = 1,
-                Name = "krishna kumar",
-                Role = "Admin",
-                Created_at = DateTime.Now
-            };
-
-            ViewBag.userDetails = user;
-
-            ViewData["pageTitle"] = "User Login Page";
-
-            return View(user);
+            return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Please correct the errors and try again.");
+                return View(model);
+            }
+
+            using (var connection = _context.CreateConnection())
+            {
+                string query = "SELECT * FROM users WHERE name = @Username ORDER BY id ASC LIMIT 1";
+
+                var parameter = new DynamicParameters();
+                parameter.Add("Username", model.Username);
+
+                var user = await connection.QueryFirstOrDefaultAsync<User>(query, parameter);
+
+                if(user == null)
+                {
+                    ModelState.AddModelError("", "Invalid credentials.");
+                    return View(model);
+                }
+
+                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Password, user.password);
+                if (!isPasswordValid)
+                {
+                    ModelState.AddModelError("", "Invalid credentials.");
+                    return View(model);
+                }
+                // Authentication successful, redirect to dashboard or home page
+                TempData["SuccessMessage"] = "Login successful!";
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+       
 
         public IActionResult Register()
         {
-            var connection = _context.CreateConnection();
+           
             return View();
         }
 
-        [HttpPost]
-         public IActionResult CreateUser(string name, string role)
+       [HttpPost]
+        public async Task<IActionResult> Register(RegisterVM model)
         {
-            User user = new User
+           if (!ModelState.IsValid)
             {
-                Id = 1,
-                Name = name,
-                Role = role,
-                Created_at = DateTime.Now
-            };
-            return View("Register", user);
+                ModelState.AddModelError("","Please correct the errors and try again.");
+                return View(model);
+            }
+
+            var encryptedPassword = BCrypt.Net.BCrypt.HashPassword(model.Password); // Implement password encryption here
+            
+            using (var connection = _context.CreateConnection())
+            {
+                string insertQuery = "INSERT INTO users (name, role, password, created_at) VALUES (@Name, @Role, @Password, @CreatedAt)";
+                var parameters = new DynamicParameters();
+                parameters.Add("Name", model.Name);
+                parameters.Add("Role", model.Role);
+                parameters.Add("Password", encryptedPassword);
+                parameters.Add("CreatedAt", DateTime.Now);
+                var executed = await connection.ExecuteAsync(insertQuery, parameters);
+
+                if (executed > 0)
+                {
+                    TempData["SuccessMessage"] = "Registration successful! Please log in.";
+                    return RedirectToAction(nameof(Login));
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Registration failed. Please try again.");
+                }
+            }
+
+            return View(model);
         }
     }
 }
