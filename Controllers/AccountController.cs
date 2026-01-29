@@ -6,6 +6,10 @@ using AuthProject.Data;
 using System.Threading.Tasks;
 using AuthProject.Models.ViewModels;
 using Dapper;
+using AuthProject.Models.ServiceModel;
+using System.Text.Json;
+using AuthProject.Services;
+using System.Collections;
 
 namespace AuthProject.Controllers
 {
@@ -13,17 +17,20 @@ namespace AuthProject.Controllers
     {
         private readonly DapperContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IAuthContextService _authContextService;
 
         public AccountController(
             DapperContext context,
-            IHttpContextAccessor httpContextAccessor
-            
+            IHttpContextAccessor httpContextAccessor,
+            IAuthContextService authContextService
+
             )
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
+            _authContextService = authContextService;
         }
-         public IActionResult Login()
+        public IActionResult Login()
         {
             return View();
         }
@@ -45,7 +52,7 @@ namespace AuthProject.Controllers
 
                 var user = await connection.QueryFirstOrDefaultAsync<User>(query, parameter);
 
-                if(user == null)
+                if (user == null)
                 {
                     ModelState.AddModelError("", "Invalid credentials.");
                     return View(model);
@@ -58,30 +65,41 @@ namespace AuthProject.Controllers
                     return View(model);
                 }
                 // Authentication successful, redirect to dashboard or home page
-                TempData["SuccessMessage"] = "Login successful!";
-                return RedirectToAction("Index", "Home");
+                // creating session or cookie can be done here
+
+                var isSessionSet = _authContextService.SetSession(user);
+                if (!isSessionSet)
+                {
+                    ModelState.AddModelError("", "Failed to create user session. Please try again.");
+                    return View(model);
+                }
+
+                // TempData["SuccessMessage"] = "Login successful!";
+                // return RedirectToAction("Index", "Home");
+                ModelState.AddModelError("", "Login successful.");
+                return View(model);
             }
         }
 
-       
+
 
         public IActionResult Register()
         {
-           
+
             return View();
         }
 
-       [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Register(RegisterVM model)
         {
-           if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("","Please correct the errors and try again.");
+                ModelState.AddModelError("", "Please correct the errors and try again.");
                 return View(model);
             }
 
             var encryptedPassword = BCrypt.Net.BCrypt.HashPassword(model.Password); // Implement password encryption here
-            
+
             using (var connection = _context.CreateConnection())
             {
                 string insertQuery = "INSERT INTO users (name, role, password, created_at, created_by, created_ip,mobile,username) VALUES (@Name, @Role, @Password, @CreatedAt, @CreatedBy, @CreatedIp,@Mobile,@Username)";
