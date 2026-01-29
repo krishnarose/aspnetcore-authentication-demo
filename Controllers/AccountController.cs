@@ -12,10 +12,16 @@ namespace AuthProject.Controllers
     public class AccountController : Controller
     {
         private readonly DapperContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AccountController(DapperContext context)
+        public AccountController(
+            DapperContext context,
+            IHttpContextAccessor httpContextAccessor
+            
+            )
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
          public IActionResult Login()
         {
@@ -32,7 +38,7 @@ namespace AuthProject.Controllers
 
             using (var connection = _context.CreateConnection())
             {
-                string query = "SELECT * FROM users WHERE name = @Username ORDER BY id ASC LIMIT 1";
+                string query = "SELECT * FROM users WHERE username = @Username ORDER BY id ASC LIMIT 1";
 
                 var parameter = new DynamicParameters();
                 parameter.Add("Username", model.Username);
@@ -78,12 +84,17 @@ namespace AuthProject.Controllers
             
             using (var connection = _context.CreateConnection())
             {
-                string insertQuery = "INSERT INTO users (name, role, password, created_at) VALUES (@Name, @Role, @Password, @CreatedAt)";
+                string insertQuery = "INSERT INTO users (name, role, password, created_at, created_by, created_ip,mobile,username) VALUES (@Name, @Role, @Password, @CreatedAt, @CreatedBy, @CreatedIp,@Mobile,@Username)";
                 var parameters = new DynamicParameters();
                 parameters.Add("Name", model.Name);
                 parameters.Add("Role", model.Role);
                 parameters.Add("Password", encryptedPassword);
                 parameters.Add("CreatedAt", DateTime.Now);
+                parameters.Add("CreatedBy", -1); // Assuming default user ID
+                parameters.Add("CreatedIp", _httpContextAccessor.HttpContext?.Connection.RemoteIpAddress?.ToString() ?? "Unknown"); // Assuming default IP address
+                parameters.Add("Mobile", model.Mobile);
+                parameters.Add("Username", model.Username);
+
                 var executed = await connection.ExecuteAsync(insertQuery, parameters);
 
                 if (executed > 0)
