@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|c:\\users\\rcs\\downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-30T15:50:59.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T15:36:15.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-30T15:39:02.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T15:37:46.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-01-30T15:35:49.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-30T15:22:53.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T12:52:37.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAmwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-30T12:51:23.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\rcs\\Downloads\\aspnetcore-authentication-demo-main\\aspnetcore-authentication-demo-main\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-29T10:21:25.964Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -37,46 +37,63 @@ namespace AuthProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM model)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                ModelState.AddModelError("", "Please correct the errors and try again.");
-                return View(model);
+                if (!ModelState.IsValid)
+                {
+                    ModelState.AddModelError("", "Please correct the errors and try again.");
+                    return View(model);
+                }
+
+                using (var connection = _context.CreateConnection())
+                {
+                    string query = "SELECT * FROM users WHERE username = @Username ORDER BY id ASC LIMIT 1";
+
+                    var parameter = new DynamicParameters();
+                    parameter.Add("Username", model.Username);
+
+                    var user = await connection.QueryFirstOrDefaultAsync<User>(query, parameter);
+
+                    if (user == null)
+                    {
+                        ModelState.AddModelError("", "Invalid credentials.");
+                        return View(model);
+                    }
+
+                    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Password, user.password);
+                    if (!isPasswordValid)
+                    {
+                        //ModelState.AddModelError("", "Invalid credentials.");
+                        TempData["ErrorMessage"] = "Invalid credentials";
+                        return View(model);
+                    }
+                    // Authentication successful, redirect to dashboard or home page
+                    // creating session or cookie can be done here
+
+                    var isSessionSet = _authContextService.SetSession(user);
+                    if (!isSessionSet)
+                    {
+                        ModelState.AddModelError("", "Failed to create user session. Please try again.");
+                        return View(model);
+                    }
+
+                    if(user.role.ToUpper() == "ADMIN")
+                    {
+                        TempData["SuccessMessage"] = "Welcome Admin!";
+                        return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                    }
+
+                    TempData["SuccessMessage"] = "Login successful!";
+                    return RedirectToAction("Index", "Home");
+                    //ModelState.AddModelError("", "Login successful.");
+                    //return View(model);
+
+                }
+
             }
-
-            using (var connection = _context.CreateConnection())
+            catch(Exception ex)
             {
-                string query = "SELECT * FROM users WHERE username = @Username ORDER BY id ASC LIMIT 1";
-
-                var parameter = new DynamicParameters();
-                parameter.Add("Username", model.Username);
-
-                var user = await connection.QueryFirstOrDefaultAsync<User>(query, parameter);
-
-                if (user == null)
-                {
-                    ModelState.AddModelError("", "Invalid credentials.");
-                    return View(model);
-                }
-
-                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Password, user.password);
-                if (!isPasswordValid)
-                {
-                    ModelState.AddModelError("", "Invalid credentials.");
-                    return View(model);
-                }
-                // Authentication successful, redirect to dashboard or home page
-                // creating session or cookie can be done here
-
-                var isSessionSet = _authContextService.SetSession(user);
-                if (!isSessionSet)
-                {
-                    ModelState.AddModelError("", "Failed to create user session. Please try again.");
-                    return View(model);
-                }
-
-                // TempData["SuccessMessage"] = "Login successful!";
-                // return RedirectToAction("Index", "Home");
-                ModelState.AddModelError("", "Login successful.");
+                TempData["ErrorMessage"] = ex.Message;
                 return View(model);
             }
         }

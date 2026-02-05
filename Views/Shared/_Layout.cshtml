@@ -41,6 +41,43 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <script>
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        icon: 'success',
+                        title: '@TempData["SuccessMessage"]',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInRight'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutRight'
+                        }
+                    });
+                </script>
+            }
+
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <script>
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        icon: 'error',
+                        title: '@TempData["ErrorMessage"]',
+                        showConfirmButton: false,
+                        timer: 3000
+                    });
+                </script>
+            }
+
         </main>
     </div>
 
