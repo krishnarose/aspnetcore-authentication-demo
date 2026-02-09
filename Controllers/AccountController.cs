@@ -77,21 +77,21 @@ namespace AuthProject.Controllers
                         return View(model);
                     }
 
-                    if(user.role.ToUpper() == "ADMIN")
+                    if (user.role.ToUpper() == "ADMIN")
                     {
                         TempData["SuccessMessage"] = "Welcome Admin!";
                         return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
                     }
 
                     TempData["SuccessMessage"] = "Login successful!";
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Profile");
                     //ModelState.AddModelError("", "Login successful.");
                     //return View(model);
 
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 TempData["ErrorMessage"] = ex.Message;
                 return View(model);
@@ -145,5 +145,31 @@ namespace AuthProject.Controllers
 
             return View(model);
         }
-    }
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            try
+            {
+                var loggedOut = _authContextService.ClearSession();
+
+                if (loggedOut)
+                {
+                    TempData["SuccessMessage"] = "Logout successful!";
+                    return RedirectToAction(nameof(Login));
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Failed to logout. Please try again.";
+                    return RedirectToAction(nameof(Login));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+                return RedirectToAction(nameof(Login));
+            }
+        }
+
+    }  
 }
