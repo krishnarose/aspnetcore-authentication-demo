@@ -1,5 +1,5 @@
 using System.Text.Json;
-using AuthProject.Models;
+using AuthProject.Models.DomainModels;
 using AuthProject.Models.ServiceModel;
 
 namespace AuthProject.Services

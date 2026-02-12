@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using AuthProject.Models;
 
 using AuthProject.Data;
 
@@ -10,6 +9,7 @@ using AuthProject.Models.ServiceModel;
 using System.Text.Json;
 using AuthProject.Services;
 using System.Collections;
+using AuthProject.Models.DomainModels;
 
 namespace AuthProject.Controllers
 {

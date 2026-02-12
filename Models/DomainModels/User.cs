@@ -1,4 +1,4 @@
-namespace AuthProject.Models
+namespace AuthProject.Models.DomainModels
 {
     public class User : BaseEntity
     {
