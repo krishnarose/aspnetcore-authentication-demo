@@ -75,7 +75,7 @@ namespace AuthProject.Areas.Admin.Controllers
                     create_by = currentSession.UserId,
                     create_ip = HttpContext.Connection.RemoteIpAddress?.ToString()
                 };
-                await _genericRepository.InsertAsync("students", newStudent);
+                var newStudentId =  await _genericRepository.InsertAsync("students", newStudent);
                 TempData["SuccessMessage"] = "Student created successfully.";
                 return RedirectToAction(nameof(Index));
 

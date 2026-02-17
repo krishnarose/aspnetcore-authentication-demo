@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\handlers\\dateonlyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:handlers\\dateonlyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\models\\domainmodels\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:models\\domainmodels\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\models\\viewmodels\\studentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:models\\viewmodels\\studentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\models\\viewmodels\\studentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:models\\viewmodels\\studentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\models\\domainmodels\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:models\\domainmodels\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\views\\shared\\components\\_studentmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:views\\shared\\components\\_studentmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\areas\\admin\\views\\student\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\views\\student\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\handlers\\dateonlyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:handlers\\dateonlyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -43,20 +55,8 @@
       "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:views\\shared\\components\\_menumaster.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\areas\\admin\\views\\student\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:areas\\admin\\views\\student\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\views\\shared\\components\\_studentmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:views\\shared\\components\\_studentmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|solutionrelative:repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{292CBF43-4299-6B66-D55D-FDB81622E18B}|AuthProject.csproj|d:\\codingwithkrishna\\aspnetcore-authentication-demo\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewImports.cshtml",
@@ -98,12 +98,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-15T11:01:03.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T11:01:03.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "DateOnlyHandler.cs",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Handlers\\DateOnlyHandler.cs",
               "RelativeDocumentMoniker": "Handlers\\DateOnlyHandler.cs",
@@ -111,12 +110,11 @@
               "RelativeToolTip": "Handlers\\DateOnlyHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T10:50:06.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T10:50:06.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Areas\\Admin\\Views\\Student\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Student\\Index.cshtml",
@@ -124,12 +122,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Student\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-15T10:35:18.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T10:35:18.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "_MenuMaster.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Views\\Shared\\Components\\_MenuMaster.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_MenuMaster.cshtml",
@@ -137,12 +134,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_MenuMaster.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-15T10:29:41.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T10:29:41.959Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "_AdminMenu.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Views\\Shared\\Components\\_AdminMenu.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_AdminMenu.cshtml",
@@ -150,12 +146,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_AdminMenu.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-15T10:29:21.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T10:29:21.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "_StudentMenu.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Views\\Shared\\Components\\_StudentMenu.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_StudentMenu.cshtml",
@@ -168,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
@@ -176,8 +171,7 @@
               "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
               "ViewState": "AgIAAAsAAABA/////z8lwBoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-15T10:25:07.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T10:25:07.772Z"
             },
             {
               "$type": "Document",
@@ -187,20 +181,20 @@
               "RelativeDocumentMoniker": "Models\\ViewModels\\StudentVM.cs",
               "ToolTip": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Models\\ViewModels\\StudentVM.cs",
               "RelativeToolTip": "Models\\ViewModels\\StudentVM.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwCUAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T09:26:52.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Student.cs",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Models\\DomainModels\\Student.cs",
               "RelativeDocumentMoniker": "Models\\DomainModels\\Student.cs",
               "ToolTip": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Models\\DomainModels\\Student.cs",
               "RelativeToolTip": "Models\\DomainModels\\Student.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBMAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBMAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T09:21:42.288Z",
               "EditorCaption": ""
@@ -215,8 +209,7 @@
               "RelativeToolTip": "Models\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T09:16:42.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T09:16:42.011Z"
             },
             {
               "$type": "Document",
@@ -228,8 +221,7 @@
               "RelativeToolTip": "Services\\AuthContextService.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowCcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T09:15:46.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T09:15:46.715Z"
             },
             {
               "$type": "Document",
@@ -241,25 +233,24 @@
               "RelativeToolTip": "Models\\ServiceModel\\AuthSession.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T09:15:00.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T09:15:00.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Areas\\Admin\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\StudentController.cs",
-              "ToolTip": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAUwEYAAAAdAAAAAAAAAA==",
+              "ToolTip": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Areas\\Admin\\Controllers\\StudentController.cs*",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\StudentController.cs*",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwE0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T09:00:38.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Areas\\Admin\\Views\\Student\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Student\\Create.cshtml",
@@ -272,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -285,26 +276,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\GenericRepository.cs",
               "ToolTip": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Repositories\\GenericRepository.cs",
               "RelativeToolTip": "Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAIQAAAAAMDMzMzMDwIsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAYwJQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T08:52:11.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IGenericRepository.cs",
               "ToolTip": "D:\\codingwithkrishna\\aspnetcore-authentication-demo\\Repositories\\IGenericRepository.cs",
               "RelativeToolTip": "Repositories\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAcAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T08:51:17.778Z",
               "EditorCaption": ""
@@ -319,8 +310,7 @@
               "RelativeToolTip": "Models\\DTOs\\GenericRepoClasses.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAA5wAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T08:47:38.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T08:47:38.024Z"
             }
           ]
         }
