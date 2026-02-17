@@ -6,5 +6,6 @@ namespace AuthProject.Models.ServiceModel
         public required string Role { get; set; }
         public required Guid SessionId { get; set; }
         public required string Name { get; set; }
+        public long UserId { get; set; }
     }
 }

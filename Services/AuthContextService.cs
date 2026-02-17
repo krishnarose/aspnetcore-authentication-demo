@@ -20,6 +20,7 @@ namespace AuthProject.Services
                 var session = new AuthSession
                 {
                     Username = user.username,
+                    UserId = user.id,
                     Role = user.role,
                     SessionId = Guid.NewGuid(),
                     Name = user.name

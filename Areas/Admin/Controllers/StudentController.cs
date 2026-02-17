@@ -1,5 +1,11 @@
 ﻿using AuthProject.Filters.Attributes;
+using AuthProject.Models.DomainModels;
+using AuthProject.Models.DTOs;
+using AuthProject.Models.ViewModels;
+using AuthProject.Repositories;
+using AuthProject.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace AuthProject.Areas.Admin.Controllers
 {
@@ -7,13 +13,23 @@ namespace AuthProject.Areas.Admin.Controllers
     [RoleAuthorize(["Admin"])]
     public class StudentController : Controller
     {
-        public StudentController()
+        private readonly IGenericRepository _genericRepository;
+        private readonly IAuthContextService _authContextService;
+
+        public StudentController(IGenericRepository genericRepository, IAuthContextService authContextService)
         {
-            
+            _genericRepository = genericRepository;
+            _authContextService = authContextService;
         }
-        public IActionResult Index()
+       public async Task<IActionResult> Index()
         {
-            return View();
+            var students = await _genericRepository.GetAsync<StudentListVM>(options: new QueryOptions
+            {
+                SelectColumns = new List<string> { "id", "first_name", "middle_name", "last_name", "email", "phone", "age", "course", "is_active" },
+                Table = "students",
+                Sorts = new List<QuerySort> { new () { Column = "created_at", Descending = true } }
+            });
+            return View(students);
         }
 
         public IActionResult Create()
@@ -21,6 +37,57 @@ namespace AuthProject.Areas.Admin.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Create(StudentCreateVM model)
+        {
+
+            try
+            {
+                if (model.Id == 0)
+                {
+                    ModelState.Remove("Id");
+                }
+                if (!ModelState.IsValid)
+                {
+                    TempData["ErrorMessage"] = "Please fill all required fields.";
+                    return View(model);
+                }
+                var currentSession = _authContextService.GetSession();
+
+                var newStudent = new Student
+                {
+                    first_name = model.FirstName,
+                    middle_name = model.MiddleName,
+                    last_name = model.LastName,
+                    email = model.Email,
+                    password = model.Password,
+                    phone = model.Phone,
+                    age = model.Age,
+                    date_of_birth = model.DateOfBirth,
+                    gender = model.Gender,
+                    is_active = model.IsActive,
+                    hobbies = model.Hobbies,
+                    course = model.Course,
+                    skills = model.Skills,
+                    address = model.Address,
+                    profile_image = model.ProfileImage.FileName,
+                    created_at = DateTime.Now,
+                    create_by = currentSession.UserId,
+                    create_ip = HttpContext.Connection.RemoteIpAddress?.ToString()
+                };
+                await _genericRepository.InsertAsync("students", newStudent);
+                TempData["SuccessMessage"] = "Student created successfully.";
+                return RedirectToAction(nameof(Index));
+
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+                return RedirectToAction(nameof(Index));
+
+
+            }
+        }
         public IActionResult Edit()
         {
             return View();

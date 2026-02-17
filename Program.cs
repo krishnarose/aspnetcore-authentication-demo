@@ -1,5 +1,8 @@
 using AuthProject.Data;
+using AuthProject.Handlers;
+using AuthProject.Repositories;
 using AuthProject.Services;
+using Dapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 builder.Services.AddTransient<DapperContext>();
+builder.Services.AddScoped<IGenericRepository, GenericRepository>();
+SqlMapper.AddTypeHandler(new DateOnlyTypeHandler());
+SqlMapper.AddTypeHandler(new NullableDateOnlyTypeHandler());
 builder.Services.AddScoped<IAuthContextService, AuthContextService>();
 
 var app = builder.Build();
