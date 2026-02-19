@@ -38,11 +38,12 @@ namespace AuthProject.Areas.Admin.Controllers
         [HttpGet("students/create")]
         public IActionResult Create()
         {
-            return View();
+            var viewModel = new StudentCreateVM();
+            return View(viewModel);
         }
 
-        [HttpPost("students/create")]
-        public async Task<IActionResult> Create(StudentCreateVM model)
+        [HttpPost("students/save")]
+        public async Task<IActionResult> Save(StudentCreateVM model)
         {
 
             try
@@ -66,10 +67,10 @@ namespace AuthProject.Areas.Admin.Controllers
                     email = model.Email,
                     password = model.Password,
                     phone = model.Phone,
-                    age = model.Age,
-                    date_of_birth = model.DateOfBirth,
-                    gender = model.Gender,
-                    is_active = model.IsActive,
+                    age = model.Age ?? 0,
+                    date_of_birth = model.DateOfBirth ?? DateOnly.MinValue,
+                    gender = model.Gender ,
+                    is_active = model.IsActive ?? true,
                     hobbies = model.Hobbies,
                     course = model.Course,
                     skills = model.Skills,
