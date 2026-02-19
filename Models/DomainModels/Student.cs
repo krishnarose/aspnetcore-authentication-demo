@@ -12,10 +12,10 @@
         public DateOnly date_of_birth { get; set; }
         public string gender { get; set; }
         public bool is_active { get; set; }
-        public List<string> hobbies { get; set; }
+        public string[] hobbies { get; set; } = Array.Empty<string>();
         public string course { get; set; }
-        public List<string> skills { get; set; }
-            //public string[] skills { get; set; }
+        public string[] skills { get; set; } = Array.Empty<string>();
+        //public string[] skills { get; set; }
         public string address { get; set; }
         public string? profile_image { get; set; }
     }

@@ -11,6 +11,7 @@ namespace AuthProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [RoleAuthorize(["Admin"])]
+    [Route("admin")]
     public class StudentController : Controller
     {
         private readonly IGenericRepository _genericRepository;
@@ -21,6 +22,7 @@ namespace AuthProject.Areas.Admin.Controllers
             _genericRepository = genericRepository;
             _authContextService = authContextService;
         }
+        [Route("students")]
        public async Task<IActionResult> Index()
         {
             var students = await _genericRepository.GetAsync<StudentListVM>(options: new QueryOptions
@@ -32,12 +34,14 @@ namespace AuthProject.Areas.Admin.Controllers
             return View(students);
         }
 
+
+        [HttpGet("students/create")]
         public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("students/create")]
         public async Task<IActionResult> Create(StudentCreateVM model)
         {
 
@@ -88,9 +92,57 @@ namespace AuthProject.Areas.Admin.Controllers
 
             }
         }
-        public IActionResult Edit()
+
+        [HttpGet("studnets/edit/{id}")]
+        public async Task<IActionResult> Edit(long id)
         {
-            return View();
+            try
+            {
+                if (id <= 0)
+                {
+                    TempData["ErrorMessage"] = "Invalid student id";
+                    return RedirectToAction(nameof(Index));
+
+                }
+
+                var student = await _genericRepository.GetByIdAsync<Student>("students", "id", id);
+                if(student == null)
+                {
+                    TempData["ErrorMessage"] = "student not found";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                var viewModel = new StudentCreateVM
+                {
+                    Id = student.id,
+                    FirstName = student.first_name,
+                    MiddleName = student.middle_name,
+                    LastName = student.last_name,
+                    Email = student.email,
+                    Password = student.password,
+                    Phone = student.phone,
+                    Age = student.age,
+                    DateOfBirth = student.date_of_birth,
+                    Gender = student.gender,
+                    IsActive = student.is_active,
+                    Hobbies = student.hobbies,
+                    Course = student.course,
+                    Skills = student.skills,
+                    Address = student.address,
+                    ProfileImage = null, // File upload will be handled separately in the view
+                    ProfileImageUrl = student.profile_image
+                };
+
+                return View("Create", viewModel);
+
+
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+                return RedirectToAction(nameof(Index));
+
+            }
         }
     }
 }

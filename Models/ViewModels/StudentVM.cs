@@ -38,10 +38,11 @@ namespace AuthProject.Models.ViewModels
         public DateOnly DateOfBirth { get; set; }
         public string Gender { get; set; }
         public bool IsActive { get; set; }
-        public List<string> Hobbies { get; set; } = new();
+        public string[] Hobbies { get; set; } = Array.Empty<string>();
         public string Course { get; set; }
-        public List<string> Skills { get; set; } = new();
+        public string[] Skills { get; set; } = Array.Empty<string>();
         public string Address { get; set; }
         public IFormFile ProfileImage { get; set; }
+       public string? ProfileImageUrl { get; set; }
     }
 }
