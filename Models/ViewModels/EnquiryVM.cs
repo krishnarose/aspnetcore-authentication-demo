@@ -4,6 +4,7 @@ namespace AuthProject.Models.ViewModels
 {
     public class EnquiryVM
     {
+        public long? Id { get; set; } = 0;
         [Required(ErrorMessage = "First Name is required.")]
         public string First_Name { get; set; }
         [Required(ErrorMessage = "Last Name is requiresd.")]
